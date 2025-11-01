@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 class AIService:
     def __init__(self):
         genai.configure(api_key=settings.GEMINI_API_KEY)
-        self.model = genai.GenerativeModel('gemini-pro')
+        self.model = genai.GenerativeModel('gemini-2.5-pro')
     
     def generate_response(self, user_message: str, conversation_history: List[ChatMessage] = []) -> str:
         try:
